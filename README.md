@@ -1,17 +1,16 @@
 Fiddling with forked version of Xv6 Kernel
 
-
 # Setup instructions:
 
-``` sudo apt-get install qemu-system ```
+sudo apt-get install qemu-system
 
-``` // Open without emulator window ```
+// Open without emulator window
 
-``` make qemu-nox ```
+make qemu-nox
 
-``` // Open with emulator window ```
+// Open with emulator window
 
-``` make qemu ```
+make qemu
 
 ## Build errors:
 
