@@ -1,4 +1,7 @@
-Fiddling with forked version of Xv6 Kernel
+# Fiddling with Xv6 Kernel:
+
+I forked the xv6 OS from the original source, added quick guide to new comers of this xv6 codebase, implementing few new sys calls, 
+enhancing/experimenting it the way i want, comments from original authors are at the end of the file.
 
 # Setup instructions:
 
