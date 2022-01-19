@@ -12,10 +12,24 @@ make qemu-nox
 
 make qemu
 
+To quit the QEMU terminal use CTRL+A then press x
+
 ## Build errors:
 
 - If error shows up in usertests.c , comment out line #1461
 - If makefile can't locate QEMU binary path, write this in line #54 ``` QEMU = qemu-system-x86_64 ```
+
+# Quick guide to codebase
+- user.h: contains all the available system calls with signature
+- bootasm.S: contains all instructions to run while booting (bare metal)
+- main.c: contains bootstrap code that sets up interrupts, serial ports, page tables, buffer cache etc.,
+- trap handlers that were setup at boot time is defined at function idtinit(void)
+
+Changing from user -> kernel mode:
+* each process in xv6 has user and kernel stacks
+* upon trapping, kernel stack stores existing process stack (file: trapasm.S)
+* followed by C code (function trap, in trap.c)
+
 
 # Comments from Original Authors
 
