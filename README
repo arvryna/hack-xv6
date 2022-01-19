@@ -1,10 +1,32 @@
-NOTE: we have stopped maintaining the x86 version of xv6, and switched
-our efforts to the RISC-V version
-(https://github.com/mit-pdos/xv6-riscv.git)
+Fiddling with forked version of Xv6 Kernel
+
+
+# Setup instructions:
+
+``` sudo apt-get install qemu-system ```
+
+``` // Open without emulator window ```
+
+``` make qemu-nox ```
+
+``` // Open with emulator window ```
+
+``` make qemu ```
+
+## Build errors:
+
+- If error shows up in usertests.c , comment out line #1461
+- If makefile can't locate QEMU binary path, write this in line #54 ``` QEMU = qemu-system-x86_64 ```
+
+# Comments from Original Authors
 
 xv6 is a re-implementation of Dennis Ritchie's and Ken Thompson's Unix
 Version 6 (v6).  xv6 loosely follows the structure and style of v6,
 but is implemented for a modern x86-based multiprocessor using ANSI C.
+
+NOTE: we have stopped maintaining the x86 version of xv6, and switched
+our efforts to the RISC-V version
+(https://github.com/mit-pdos/xv6-riscv.git)
 
 ACKNOWLEDGMENTS
 
